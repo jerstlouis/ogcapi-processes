@@ -5053,7 +5053,8 @@
             "type": "string",
             "format": "uri-reference"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "results": {
         "additionalProperties": {
@@ -5151,63 +5152,40 @@
                 ]
               },
               "not": {
-                "oneOf": [
-                  {
-                    "$ref": "#/components/schemas/reference"
-                  }
-                ]
+                "$ref": "#/components/schemas/schema"
               },
               "allOf": {
                 "type": "array",
                 "items": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/reference"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/schema"
                 }
               },
               "oneOf": {
                 "type": "array",
                 "items": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/reference"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/schema"
                 }
               },
               "anyOf": {
                 "type": "array",
                 "items": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/reference"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/schema"
                 }
               },
               "items": {
-                "oneOf": [
-                  {
-                    "$ref": "#/components/schemas/reference"
-                  }
-                ]
+                "$ref": "#/components/schemas/schema"
               },
               "properties": {
                 "type": "object",
+                "properties": {},
                 "additionalProperties": {
-                  "oneOf": [
-                    {
-                      "$ref": "#/components/schemas/reference"
-                    }
-                  ]
+                  "$ref": "#/components/schemas/schema"
                 }
               },
               "additionalProperties": {
                 "oneOf": [
                   {
-                    "$ref": "#/components/schemas/reference"
+                    "$ref": "#/components/schemas/schema"
                   },
                   {
                     "type": "boolean"
